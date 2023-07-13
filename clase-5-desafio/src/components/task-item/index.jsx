@@ -1,5 +1,5 @@
-import { CheckBox, View, Text, TouchableOpacity } from "react-native";
-
+import { View, Text, TouchableOpacity } from "react-native";
+import Checkbox from 'expo-checkbox';
 import { styles } from "./styles";
 
 const TaskItem = ({ onPressItem,onDeleteItem, item }) => {
@@ -7,7 +7,7 @@ const TaskItem = ({ onPressItem,onDeleteItem, item }) => {
     <TouchableOpacity onPress={() => onPressItem(item)} >
     <View style={styles.containerItem}>
      
-        <CheckBox
+        <Checkbox
               value={item.completed}
 
             />
